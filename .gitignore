@@ -1,0 +1,8 @@
+# Codeigniter Gitignore
+# Ref: https://github.com/github/gitignore/blob/master/CodeIgniter.gitignore
+
+.env
+*.lock
+vendor
+dump
+user_guide
