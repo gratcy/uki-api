@@ -18,8 +18,13 @@ class Home extends MX_Controller {
 				$response[$v -> cid]['gallery'][] = array('gtitle' => $v1 -> gtitle, 'gfile' => $v1 -> gfile, 'gcontent' => $v1 -> gcontent);
 			endforeach;
 		endforeach;
-		
-		$data = array('data' => $response);
+
+		$res = array();
+		foreach ($response as $key => $value) {
+			$res[] = $value;
+		}
+
+		$data = array('data' => $res);
 
 		$this->output
 	        ->set_status_header(200)
