@@ -12,10 +12,10 @@ class Home extends MX_Controller {
 		$category = $this -> Gallery_model -> __get_category_gallery($faculty);
 		$response = array();
 		foreach ($category as $k => $v) :
-			$response[] = array('cname' => $v -> cname);
+			$response[$v -> cid] = array('cid' => $v -> cid, 'cname' => $v -> cname);
 			$data = $this -> Gallery_model -> __get_gallery($faculty, $v -> cid);
 			foreach($data as $k1 => $v1) :
-				$response['gallery'][] = array('gtitle' => $v1 -> gtitle, 'gfile' => $v1 -> gfile, 'gcontent' => $v1 -> gcontent);
+				$response[$v -> cid]['gallery'][] = array('gtitle' => $v1 -> gtitle, 'gfile' => $v1 -> gfile, 'gcontent' => $v1 -> gcontent);
 			endforeach;
 		endforeach;
 		

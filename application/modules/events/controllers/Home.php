@@ -8,8 +8,7 @@ class Home extends MX_Controller {
 	}
 
 	public function index($faculty) {
-		$limit = (int) $this -> input -> get('limit');
-		$data['data'] = $this -> Events_model -> __get_events($faculty, $limit);
+		$data['data'] = $this -> Events_model -> __get_events($faculty);
 		$this->output
 	        ->set_status_header(200)
 	        ->set_content_type('application/json', 'utf-8')
