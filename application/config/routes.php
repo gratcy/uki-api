@@ -56,6 +56,7 @@ $route['translate_uri_dashes'] = FALSE;
 $route['posts/get/(:num)'] = 'posts/home/index/$1';
 $route['posts/detail/(:num)/(:num)'] = 'posts/home/detail/$1/$2';
 
+$route['page/get/menus/(:num)'] = 'pages/home/menus/$1/$2';
 $route['page/detail/(:num)/(:num)'] = 'pages/home/detail/$1/$2';
 
 $route['events/detail/(:num)/(:num)'] = 'events/home/detail/$1/$2';
